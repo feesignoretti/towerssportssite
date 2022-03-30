@@ -1,7 +1,8 @@
 :root {
-  --background: #fff;
-  --one: #333;
-  --one-hover: #111;
+  --background: #111;
+  --background-contrast: #333;
+  --one: #ddd;
+  --one-hover: #ccc;
   --two: #ff6600;
   --two-hover: #ca5201;
   --two-focusout: #ff934a;
@@ -164,7 +165,8 @@ h6 {
   background: transparent;
 }
 #header.header-scrolled {
-  background: var(--one);
+  background: var(--background);
+  border-bottom: 1px solid var(--title);
   height: 60px;
 }
 #header .logo h1 {
@@ -349,6 +351,10 @@ h6 {
   .navbar ul {
     display: none;
   }
+
+  .hero-img{
+    display: none;
+  }
 }
 .navbar-mobile {
   position: fixed;
@@ -502,6 +508,8 @@ h6 {
 }
 #hero .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
+  border-radius: 25%;
+  margin-top: 20%;
 }
 @media (min-width: 1024px) {
   #hero {
@@ -655,7 +663,7 @@ section {
 }
 
 .section-bg {
-  background-color: #f5f5ff;
+  background-color: var(--background-contrast);
 }
 
 .section-title {
@@ -997,8 +1005,8 @@ section {
 --------------------------------------------------------------*/
 .gallery .gallery-item {
   overflow: hidden;
-  border-right: 3px solid #fff;
-  border-bottom: 3px solid #fff;
+  border-right: 3px solid var(--background);
+  border-bottom: 3px solid var(--background);
 }
 .gallery .gallery-item img {
   transition: all ease-in-out 0.4s;
@@ -1103,7 +1111,7 @@ section {
 # Team
 --------------------------------------------------------------*/
 .team {
-  background: #fff;
+  background: var(--background-contrast);
 }
 .team .member {
   text-align: center;
@@ -1125,7 +1133,7 @@ section {
   bottom: -80px;
   left: 0px;
   right: 0px;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--background);
   padding: 15px 0;
   border-radius: 0 0 4px 4px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
@@ -1380,7 +1388,7 @@ section {
 }
 .contact .php-email-form {
   width: 100%;
-  background: #fff;
+  background: var(--background);
 }
 .contact .php-email-form .form-group {
   padding-bottom: 8px;
@@ -1466,7 +1474,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: var(--one);
+  background: var(--background);
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
@@ -1580,9 +1588,10 @@ section {
   background: var(--two-hover);
 }
 #footer .copyright {
-  border-top: 1px solid var(--one);
+  /* border-top: 1px solid var(--background-contrast); */
   text-align: center;
   padding-top: 30px;
+  font-size: 20px;
 }
 #footer .credits {
   padding-top: 10px;
