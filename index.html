@@ -26,7 +26,10 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="http://fonts.cdnfonts.com/css/kenyan-coffee-2" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -39,7 +42,7 @@
 
       <div class="logo">
         <!-- <h1><a href="index.html"><span>TOWERS SPORTS</span></a></h1> -->
-        <a href="index.html"><img src="assets/img/logo/logo3.png" alt="" class="img-fluid logo-big"></a>
+        <a href="index.html"><img src="assets/img/logo/logo1.png" alt="" class="img-fluid logo-big"></a>
         <a href="index.html"><img src="assets/img/logo/logo1.png" alt="" class="img-fluid logo-mini"></a>
       </div>
 
@@ -58,21 +61,37 @@
   </header>
 
   <section id="hero">
+    <svg class="hero-waves invert" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28 " preserveAspectRatio="none">
+      <defs>
+        <path id="wave-path2" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" >
+      </defs>
+      <g class="wave1">
+        <use xlink:href="#wave-path2" x="50" y="3" fill="rgba(1, 1, 0, .1)">
+      </g>
+      <g class="wave2">
+        <use xlink:href="#wave-path2" x="50" y="0" fill="rgba(1, 1, 0, .3)">
+      </g>
+      <g class="wave3">
+        <use xlink:href="#wave-path2" x="50" y="9" fill="rgba(1, 1, 0, 1)">
+      </g>
+    </svg>
+
 
     <div class="container">
       <div class="row justify-content-between">
 
         <video autoplay muted playsinline id="bgvid"></video>
 
-        <div class="col-lg-7 pt-5 pt-lg-0 order-1 order-lg-1 d-flex align-items-center">
+        <div class="col-lg-7 pt-5 pt-lg-0 order-1 order-lg-1 d-flex align-items-center" style="z-index: 1">
           <div data-aos="zoom-out">
             <h1>Conheça a TOWERS SPORTS</h1>
             <h2>E facilite o acesso a diversas modalidades esportivas e recreativas, de uma forma totalmente diferente
               que você já viu!</h2>
-            <a href="#contact" class="btn btn-white">Faça uma cotação</a>
+            <!-- <a href="#contact" class="btn btn-white">Faça uma cotação</a> -->
           </div>
         </div>
-        <div class="col-lg-4 order-2 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
+        <div class="col-lg-4 order-2 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300"  style="z-index: 1">
           <img src="assets/img/towerssports.oficial_qr.png" alt="" class="img-fluid animated">
         </div>
       </div>
@@ -107,11 +126,11 @@
               data-autoplay="true"></a>
           </div> -->
 
-          <div
-            class="col-lg-12 icon-boxes d-flex flex-column align-items-stretch justify-content-center pt-4"
+          <div class="col-lg-12 icon-boxes d-flex flex-column align-items-stretch justify-content-center pt-4"
             data-aos="fade-left">
             <h3 class="box-title">Quem somos nós</h3>
-            <p class="box-p">No Brasil é comum nos depararmos com pessoas atarefadas, sem tempo ou com alguma dificuldade para
+            <p class="box-p">No Brasil é comum nos depararmos com pessoas atarefadas, sem tempo ou com alguma
+              dificuldade para
               se dedicar a alguma atividade física. Por esses motivos, a TOWERS SPORTS é uma empresa que facilita
               o acesso a diversas modalidades esportivas e recreativas, além de exercícios que contribui com a
               qualidade de vida, saúde, segurança e lazer para todos: adultos, jovens, crianças, idosos e pessoas com
@@ -145,7 +164,14 @@
                 deserunt minus aut eligendi omnis</p>
             </div> -->
 
+
           </div>
+          <div class="col-lg-12 icon-boxes d-flex flex-column centered justify-content-center pt-4">
+            <p>
+              <a href="#contact" class="btn btn-white">Faça uma cotação</a>
+            </p>
+          </div>
+
         </div>
 
       </div>
@@ -248,7 +274,7 @@
               <li><i class="bi bi-check"></i> Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.</li>
             </ul>
           </div> -->
-        </div>
+      </div>
       </div>
     </section>
 
@@ -421,7 +447,8 @@
 
         <div class="row">
           <div class="col-lg-12 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
-            <p data-aos="fade-left"  class="box-p">Fique a vontade para falar conosco, solicitar uma cotação ou entender como nós estamos mudando a forma de trazer saúde para a comunidade.</p>
+            <p data-aos="fade-left" class="box-p">Fique a vontade para falar conosco, solicitar uma cotação ou entender
+              como nós estamos mudando a forma de trazer saúde para a comunidade.</p>
 
             <form action="mailto:contact@yourdomain.com" method="POST" enctype="multipart/form-data" name="EmailForm"
               class="php-email-form">
@@ -466,13 +493,15 @@
         </div>
 
         <div class="row">
-          <div class="social-links mt-3">
+          <div class="social-links">
             <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
             <!-- <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> -->
-            <a href="https://www.instagram.com/towerssports.oficial/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="https://www.instagram.com/towerssports.oficial/" target="_blank" class="instagram"><i
+                class="bx bxl-instagram"></i></a>
             <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
             <!-- <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
-            <a href="https://api.whatsapp.com/send?phone=5511958003255&text=Como%20podemos%20te%20ajudar%3F" target="_blank" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=5511958003255&text=Como%20podemos%20te%20ajudar%3F"
+              target="_blank" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
           </div>
         </div>
       </div>

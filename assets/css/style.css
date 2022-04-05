@@ -2,47 +2,23 @@
   --background: #111;
   --background-contrast: #333;
   --one: #ddd;
-  --one-hover: #ccc;
+  --one-hover: #111;
   --two: #ff6600;
   --two-hover: #ca5201;
   --two-focusout: #ff934a;
   --title: #ff6600;
+  --font-normal: 'Rajdhani';
+  --font-bold: '';
+  --font-title: '';
+  --header-size: 80px;
 }
 
-@font-face {
-  font-family: 'KenyanCoffee-Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: local('KenyanCoffee-Regular'), url('../font/kenyan coffee.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'KenyanCoffee-Italic';
-  font-style: normal;
-  font-weight: normal;
-  src: local('KenyanCoffee-Italic'), url('../font/kenyan coffee it.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'KenyanCoffee-Bold';
-  font-style: normal;
-  font-weight: normal;
-  src: local('KenyanCoffee-Bold'), url('../font/kenyan coffee bd.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'KenyanCoffee-BoldItalic';
-  font-style: normal;
-  font-weight: normal;
-  src: local('KenyanCoffee-BoldItalic'),
-    url('../font/kenyan coffee bd it.woff') format('woff');
-}
 
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "KenyanCoffee-Regular", sans-serif;
+  font-family: var(--font-normal), sans-serif;
   letter-spacing: 1.2px;
   color: var(--one);
   background-color: var(--background);
@@ -64,7 +40,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "KenyanCoffee-Bold", sans-serif;
+  font-family: var(--font-normal), sans-serif;
   letter-spacing: 1.2px;
 }
 
@@ -155,17 +131,15 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  height: 80px;
-  transition: all 0.5s;
+  height: var(--header-size);
   z-index: 997;
-  transition: all 0.5s;
-  background: var(--one);
+  transition: all .3s;
+  background: var(--background);
 }
 #header.header-transparent {
-  background: transparent;
+  background:black;
 }
 #header.header-scrolled {
-  background: var(--background);
   border-bottom: 1px solid var(--title);
   height: 60px;
 }
@@ -234,7 +208,7 @@ h6 {
   font-size: 21px;
   letter-spacing: 1.1px;
   font-weight: 500;
-  font-family: "KenyanCoffee-Regular", sans-serif;
+  font-family: var(--font-normal), sans-serif;
   color: rgba(255, 255, 255, 0.7);
   white-space: nowrap;
   transition: 0.3s;
@@ -363,7 +337,7 @@ h6 {
   right: 0;
   left: 0;
   bottom: 0;
-  background: var(--one);
+  background: var(--background);
   transition: 0.3s;
   z-index: 999;
 }
@@ -445,25 +419,26 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  /* background: url("https://thumbs.gfycat.com/OddIdioticFlatfish-max-1mb.gif"); */
+  background-color: black;
   position: relative;
   background-size: cover;
-  padding: 90px 0 0 0;
+  padding: 20px 0 0 0;
 }
 #hero:before {
   content: "";
   background: var(--two);
   position: absolute;
   bottom: 0;
-  top: 0;
+  top: var(--header-size);
   left: 0;
   right: 0;
   opacity: .9;
+  z-index: 1;
 }
 #hero #bgvid {
   position: absolute;
-  z-index: -1;
-  top: 0;
+  z-index: 0;
+  top: var(--header-size);
   left: 0;
   height: 100%;
   width: 100%;
@@ -489,10 +464,10 @@ h6 {
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 40px;
   font-size: 24px;
-  font-family: 'KenyanCoffee-Regular';
+  font-family: var(--font-normal);
 }
 #hero .btn-get-started {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-normal), sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -518,7 +493,7 @@ h6 {
 }
 @media (max-width: 991px) {
   #hero {
-    padding-top: 80px;
+    padding-top: 20px;
   }
   #hero .animated {
     -webkit-animation: none;
@@ -603,6 +578,11 @@ h6 {
   animation: move-forever3 30s linear infinite;
   -webkit-animation-delay: -2s;
   animation-delay: -2s;
+  opacity: .9;
+}
+
+#hero .wave3 use {
+  opacity: 1;
 }
 
 @-webkit-keyframes move-forever1 {
@@ -678,7 +658,7 @@ section {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #aaaaaa;
-  font-family: "KenyanCoffee", sans-serif;
+  font-family: var(--font-normal), sans-serif;
   letter-spacing: 2px;
 }
 .section-title h2::after {
@@ -694,7 +674,7 @@ section {
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: "KenyanCoffee", sans-serif;
+  font-family: var(--font-normal), sans-serif;
   color: var(--title);
   letter-spacing: 4px;
 }
@@ -969,7 +949,7 @@ section {
 .counts .count-box p {
   padding: 0;
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-normal), sans-serif;
   font-size: 14px;
 }
 
@@ -1202,7 +1182,7 @@ section {
   font-size: 36px;
   color: var(--two);
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-normal), sans-serif;
   margin-bottom: 20px;
 }
 .pricing h4 sup {
@@ -1250,7 +1230,7 @@ section {
   transition: none;
   font-size: 14px;
   font-weight: 400;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-normal), sans-serif;
   font-weight: 600;
   transition: 0.3s;
 }
@@ -1296,7 +1276,7 @@ section {
 .faq .faq-list a {
   display: block;
   position: relative;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-normal), sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
@@ -1500,7 +1480,7 @@ section {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-normal), sans-serif;
 }
 #footer .footer-top .social-links a {
   font-size: 18px;
@@ -1606,7 +1586,7 @@ section {
 }
 
 #social .social-links {
-  font-size: 50px;
+  font-size: 90px;
   text-align: center;
 }
 
@@ -1634,9 +1614,19 @@ section {
   color: var(--title);
   margin-bottom: 15px;
 }
+
 .box-p {
   font-size: 21px;
 }
 
+.centered{
+  text-align: center;
+}
 
+.bg-black{
+  background-color: var(--background);
+}
 
+.invert{
+  transform: scaleY(-1);
+}
