@@ -2,7 +2,7 @@
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-    color: #fff;
+    color: var(--two);
     font-size: 28px;
     cursor: pointer;
     display: none;
@@ -29,7 +29,7 @@
 }
 
 .navbar-mobile ul {
-    display: block;
+    display: block !important;
     position: absolute;
     top: 55px;
     right: 15px;
@@ -125,7 +125,6 @@
         padding: 0;
     }
 }
-
 
 
 @media (min-width: 1024px) {
