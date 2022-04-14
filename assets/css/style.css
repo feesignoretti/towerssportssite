@@ -1664,19 +1664,29 @@ section {
   margin-top: -60px;
 }
 
-#modalities .member-info {
-  position: relative;
-  border: 2px solid transparent;
-  min-height: 291px;
-  border-radius: 6px;
-  box-shadow: none;
+#modalities .item {
+  display: block;
+  transition: all 0.3s linear;
 }
 
-#modalities .member-info h3 {
+#modalities .item-info {
+  display: block;
+  min-height: auto;
+  font-size: 18px;
+  text-align: center;
+  margin: 30px 0 60px;
+}
+
+#modalities .item-info span{
+  display: block;
+  font-style: italic;
+}
+
+#modalities .item-info h3 {
   margin-bottom: 15px;
 }
 
-#modalities .member-info h3::after {
+#modalities .item-info h3::after {
   content: '';
   display: block;
   width: 100px;
@@ -1688,17 +1698,9 @@ section {
   margin: auto;
 }
 
-#modalities .member {
-  transition: all 0.3s linear;
-}
-
-#modalities .member:hover {
+#modalities .item:hover {
   transform: scale(1.101);
   z-index: 11;
-}
-
-#modalities .member span {
-  font-size: 18px;
 }
 
 .biglogo{
