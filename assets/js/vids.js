@@ -5,6 +5,7 @@ videoSource[2] = 'assets/vids/2.mp4';
 videoSource[3] = 'assets/vids/3.mp4';
 videoSource[4] = 'assets/vids/4.mp4';
 videoSource[5] = 'assets/vids/5.mp4';
+videoSource[6] = 'assets/vids/6.mp4';
 let i = 0; 
 const videoCount = videoSource.length;
 const element = document.getElementById("bgvid");

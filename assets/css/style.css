@@ -1711,3 +1711,27 @@ textarea.form-control{
   min-height: 90px;
   max-height: 90px;
 }
+
+.video-container {
+  overflow: hidden;
+  position: relative;
+  width:100%;
+  max-width: 600px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.video-container::after {
+  padding-top: 56.25%;
+  display: block;
+  content: '';
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
